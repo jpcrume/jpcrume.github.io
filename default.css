@@ -11,7 +11,7 @@ body {
   .image {
         position: absolute;
         top: 0px;
-        right: 100;
+        right: 1000;
         width: 100px;
-        height: 50px;
+        height: 300px;
   }
