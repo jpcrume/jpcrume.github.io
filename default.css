@@ -13,3 +13,9 @@ body {
         top: 200px;
         right: 380px;
   }
+
+  .paragraph {
+    position: absolute;
+    top: 700px;
+    right: 380px;
+}
