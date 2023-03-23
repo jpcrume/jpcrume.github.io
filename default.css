@@ -10,12 +10,12 @@ body {
 
   .image {
         position: absolute;
-        top: 200px;
+        top: 150px;
         right: 380px;
   }
 
   .paragraph {
     position: absolute;
     top: 700px;
-    right: 380px;
+    right: 500px;
 }
