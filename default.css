@@ -15,7 +15,7 @@ body {
   }
 
   .paragraph {
-    position: float;
-    top: 700px;
+    position: absolute;
+    top: 10000px;
     right: 1000px;
 }
