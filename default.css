@@ -8,10 +8,9 @@ body {
     color: darkslategray;
   }
 
-  image {
-    div:
-        position; absolute:
-        top 20px;
+  .image {
+        position: absolute;
+        top: 20px;
         right: 200;
         width: 200px;
         height: 100px;
