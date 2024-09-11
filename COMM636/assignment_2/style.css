@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.story {
+    text-align: center;
+    font-size: 20px;
+}
+
+.story-link {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.story-link:hover {
+    text-decoration: underline;
+}
+
+body.page-intro {
+    cursor: url('../assignment_2/media/sammy.png'), auto; 
+}

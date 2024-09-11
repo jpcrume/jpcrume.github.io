@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website Demonstrations">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Julia Crume">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia's Blawg!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    Julia's BLAWG <3
+    <img src="images/under-construction-pikachu.gif" alt="Pikachu">
+</header>
+
+<div class="marquee">
+    <marquee>Hiiiii <3 Welcome to my blog! Check out some of my posts, favorite things, and don't forget to sign my guestbook!</marquee>
+</div>
+
+<main>
+    <div class="sidebar">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="favorites.html">My Favorite Links</a></li>
+        </ul>
+        <img src="images/nyan-cat-rainbow.gif" alt="Nyan Cat" width="100">
+    </div>
+
+    <div class="content">
+        <h2>Latest Post <span class="blink">NEW!</span></h2>
+        <p>September 9, 2024 - Here lies my COMM 636 Accessibility Assignment, I hope you enjoy :) </p>
+
+        <hr>
+
+        <h2>Previous Posts</h2>
+        <p>No previous posts yet. Check back soon!</p>
+
+        <div class="guestbook">
+            <h3>Sign My Guestbook!</h3>
+            <textarea id="guestbook-message" rows="4" cols="50" placeholder="Leave a message..."></textarea>
+            <br>
+            <button onclick="submitGuestbook()">Submit</button>
+            <div id="guestbook-entries">
+            </div>
+        </div>
+
+        <div class="email-form">
+            <h3>Subscribe to My Newsletter!</h3>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <br><br>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    Thanks for stopping by, come back soon!!!
+</footer>
+
+<script>
+    function submitGuestbook() {
+        var message = document.getElementById('guestbook-message').value;
+        if (message.trim() === '') {
+            alert('Please enter a message.');
+            return;
+        }
+
+        var guestbookEntries = document.getElementById('guestbook-entries');
+        var newEntry = document.createElement('div');
+        newEntry.className = 'guestbook-entry';
+        newEntry.textContent = message;
+        guestbookEntries.appendChild(newEntry);
+
+        document.getElementById('guestbook-message').value = '';
+    }
+</script>
+
+</body>
+</html>

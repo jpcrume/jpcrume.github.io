@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website Demonstrations">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Julia Crume">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia's Blawg!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #F2BBD8;
+            color: #000;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #D6439F;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 3px solid #000;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        main {
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #eee;
+            padding: 10px;
+            border-right: 2px solid #000;
+            margin-right: 10px;
+            position: relative; /* Ensure proper stacking context */
+            overflow: hidden; /* Prevent GIF from overflowing */
+        }
+
+        .sidebar img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px; /* Increased size */
+            height: auto;
+            z-index: -1; /* Position behind the text */
+            opacity: 0.5; /* Optional: make the GIF semi-transparent */
+        }
+
+        .content {
+            flex: 1;
+            padding: 10px;
+            background-color: #fff;
+            border: 2px dashed #000;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #D6439F;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 3px solid #000;
+        }
+
+        .marquee {
+            background-color: #E798C4;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px;
+            border: 2px solid #000;
+            margin-bottom: 10px;
+        }
+
+        .hit-counter {
+            font-size: 12px;
+            color: #333;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .blink {
+            color: red;
+            font-weight: bold;
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        .guestbook {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 2px solid #000;
+        }
+
+        .guestbook-entry {
+            border-top: 1px solid #000;
+            padding-top: 10px;
+        }
+
+        .email-form {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Welcome to My Retro Blog!
+    <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" alt="Dancing GIF">
+</header>
+
+<div class="marquee">
+    <marquee>Welcome to my cool 90s blog! Check out the latest updates and don't forget to sign my guestbook!</marquee>
+</div>
+
+<main>
+    <div class="sidebar">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">My Favorite Links</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Spinning Icon">
+    </div>
+
+    <div class="content">
+        <h2>Latest Post <span class="blink">NEW!</span></h2>
+        <p>September 5, 2024 - Today, I started my retro blog! It's going to be a blast writing about my daily life, sharing my favorite links, and connecting with friends. Stay tuned for more updates!</p>
+
+        <hr>
+
+        <h2>Previous Posts</h2>
+        <p>No previous posts yet. Check back soon!</p>
+
+        <div class="guestbook">
+            <h3>Sign My Guestbook!</h3>
+            <textarea id="guestbook-message" rows="4" cols="50" placeholder="Leave a message..."></textarea>
+            <br>
+            <button onclick="submitGuestbook()">Submit</button>
+            <div id="guestbook-entries">
+                <!-- Existing entries will be appended here -->
+            </div>
+        </div>
+
+        <div class="email-form">
+            <h3>Subscribe to My Newsletter!</h3>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <br><br>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2024 My Retro Blog | <span class="hit-counter">Hit Counter: 00123</span>
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Visitor Badge" width="100">
+</footer>
+
+<script>
+    function submitGuestbook() {
+        var message = document.getElementById('guestbook-message').value;
+        if (message.trim() === '') {
+            alert('Please enter a message.');
+            return;
+        }
+
+        var guestbookEntries = document.getElementById('guestbook-entries');
+        var newEntry = document.createElement('div');
+        newEntry.className = 'guestbook-entry';
+        newEntry.textContent = message;
+        guestbookEntries.appendChild(newEntry);
+
+        document.getElementById('guestbook-message').value = '';
+    }
+</script>
+
+</body>
+</html>
