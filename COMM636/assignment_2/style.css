@@ -1,16 +1,27 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f8ff;
     font-family: Arial, sans-serif;
     margin: 0;
+    position: relative;
+    overflow: hidden; 
 }
 
+
 .story {
-    text-align: center;
+    text-align: center; 
     font-size: 20px;
+    position: relative; 
+    max-width: 80%; 
+}
+
+.story .pet-image {
+    display: block; 
+    margin: 0 auto; 
 }
 
 .story-link {
@@ -24,6 +35,122 @@ body {
     text-decoration: underline;
 }
 
-body.page-intro {
-    cursor: url('../assignment_2/media/sammy.png'), auto; 
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.story:hover .hidden,
+.top-left:hover .hidden,
+.bottom-right:hover .hidden {
+    opacity: 1;
+}
+
+body.intro {
+    cursor: url('../assignment_2/media/sammy.png'), auto;
+}
+
+body.intro .top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+}
+
+body.intro .bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+}
+
+body.fed .vertical-text {
+    position: absolute;
+    top: 50px; 
+    left: 50px; 
+    width: 200px; 
+    overflow: hidden; 
+}
+
+body.fed .vertical-text p {
+    display: inline-block;
+    transform: rotate(90deg); 
+    font-size: 40px; 
+    font-weight: bold;
+    color: #000000; 
+    white-space: nowrap; 
+    animation: marquee 10s linear infinite; 
+}
+
+@keyframes marquee {
+    from {
+        transform: rotate(90deg) translateX(100%);
+    }
+    to {
+        transform: rotate(90deg) translateX(-100%);
+    }
+}
+
+body.fed .story p {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.fed .story:hover p {
+    opacity: 1;
+}
+
+body.fed .bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+}
+
+body.clean {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text size for the WOW animation */
+body.clean .large-text {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    font-size: 200px; 
+    font-weight: bold;
+    color: #211298; 
+    animation: bounce 2s infinite; 
+}
+
+/* For the WOW animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Styles for clean.html */
+body.clean .story {
+    position: absolute;
+    bottom: 20px; 
+    left: 20px; 
+    max-width: 400px; 
+    width: auto; 
+    text-align: left;
+}
+
+
+body.clean .story .pet-image {
+    margin: 0 auto; 
 }
