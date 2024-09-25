@@ -283,9 +283,11 @@ body.project-page {
     }
 }
 
-.project_image {
-    width: 300px;  /* Change the width to your desired size */
-    height: auto;  /* Let the height adjust proportionally */
+.project-page .project_image {
+    width: 100%;       /* Make the image fill the width of the container */
+    height: 200px;     /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    border-radius: 10px; /* Optional: to keep the same border radius as the other elements */
 }
 
 /* --- COMM 636 PAGE SPECIFIC STYLES --- */
