@@ -3,7 +3,7 @@ body {
     font-family: 'Comic Sans MS', cursive;
     margin: 0;
     padding: 0;
-    background-color: #ff0000; /* Light pink for early 2000s vibe */
+    background-color: #ff0000; 
     color: #ff0000;
   }
   
@@ -21,9 +21,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2d0d86; /* Bright pink for header */
+    background-color: #2d0d86; 
     padding: 20px;
-    color: #fff; /* White text */
+    color: #fff; 
   }
   
   .logo-img {
@@ -50,7 +50,7 @@ body {
   /* Sidebar and Content Flexbox Layout */
   .main-content {
     display: flex;
-    align-items: flex-start; /* Align items at the start (top) */
+    align-items: flex-start; /* Align items at the top */
     width: 100%;
     padding: 0;
   }
