@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #ff0000; /* Light pink for early 2000s vibe */
+    color: #ff0000;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ff0000; /* color for links */
+  }
+  
+  a:hover {
+    color: #0000ff; /* Blue hover effect */
+  }
+  
+  /* Flexbox Layout for Header */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d0d86; /* Bright pink for header */
+    padding: 20px;
+    color: #fff; /* White text */
+  }
+  
+  .logo-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+  .flex-container nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .flex-container nav ul li {
+    margin-right: 20px;
+  }
+  
+  .flex-container nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Sidebar and Content Flexbox Layout */
+  .main-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the start (top) */
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 25%; /* Make the sidebar smaller */
+    background-color: #000000; /* color for sidebar */
+    padding: 20px;
+    border-right: 3px dashed #e2a74e; /* dashed border */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: #ff0000; /* font color for sidebar */
+  }
+  
+  .gif-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .content {
+    width: 75%; /* Content takes up remaining space */
+    padding: 20px;
+    background-color: #fff;
+    border-left: 3px solid #2d0d86;
+    margin-top: 0; /* Ensure it's aligned to the top */
+  }
+  
+  /* Grid Layout for Gallery */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .grid-item {
+    background-color: #e2a74e; 
+    padding: 20px;
+    border: 2px solid #2d0d86; /* borders */
+    text-align: left; /* Align the text to the left */
+  }
+  
+  .face-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Flexbox */
+  .footer {
+    justify-content: center;
+    padding: 20px;
+    background-color: #2d0d86;
+    color: #fff;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-weight: bold;
+  }
