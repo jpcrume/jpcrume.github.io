@@ -306,6 +306,14 @@ body.project-page {
     border-radius: 10px; /* Optional: to keep the same border radius as the other elements */
 }
 
+.project-page .project_video {
+    width: 100%;       /* Make the video fill the width of the container */
+    height: 200px;     /* Set a fixed height for the video */
+    object-fit: cover; /* Ensures the video covers the container while maintaining aspect ratio */
+    border-radius: 10px; /* Optional: to keep the same border radius as the other elements */
+}
+
+
 /* --- COMM 636 PAGE SPECIFIC STYLES --- */
 body.comm636-page {
     background-color: #F0E4D7;
