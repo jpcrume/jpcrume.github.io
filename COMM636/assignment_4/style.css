@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* WE LOVE CENTER ALIGNMENT IN THIS HOUSE */
+    height: 100vh;
+    background: linear-gradient(to right, #a670f8, #5ac6fd); /* This is for a cool background color scheme that goes purple to blue gradient*/
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.eight-ball {
+    position: relative;
+    width: 450px; 
+    height: 450px; 
+    background-image: url('../assignment_4/media/eightball.png'); /* To include and adjust the eight ball image <3 */
+    background-size: cover;
+    margin: 20px auto;
+}
+
+.response-text {
+    position: absolute;
+    top: 52%; /* To make sure the text is well aligned with the png */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; 
+    height: 60px; 
+    color: white;
+    font-size: 16px; 
+    text-align: center;
+    background-color: rgba(49, 27, 244, 0); /* I played around with the concept of a colorful translucent background for the text but didn't like it enough */
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.button, #ask-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Just to make the button look preeeetttyyy and match the voibes */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* We need this to make it all work yaaaas (we say pointed so that it is when it is clicked not when it is hovered over) */
+    margin-top: 20px;
+}
+
+.button:hover, #ask-button:hover {
+    background-color: #0056b3; /* This is a pretty feature so that the button gets darker when hovered to indicate to the user it can be clicked in case it was not obvious */
+}
+
+#question-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

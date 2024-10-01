@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRTUAL MAGIC EIGHT BALL</title>
+    <link rel="stylesheet" href="style.css"> <!-- For pretty-ifying the site, we still need the queen herself miss style.css -->
+</head>
+<body>
+    <div class="container">
+        <h1>VIRTUAL MAGIC EIGHT BALL</h1>
+        <!-- The making of the eight ball... -->
+         <!-- For the eight ball, since the answer will be inside of the image of it, it needs to be within the div -->
+        <div class="eight-ball">
+             <!-- For the .js we need a response for the eight ball's answer to an input question in text form -->
+            <div id="response" class="response-text"></div>
+        </div>
+        
+        <!-- Now, we need to make sure the user is able to input text questions -->
+        <input type="text" id="question-input" placeholder="Ask and your wish may be granted..." />
+
+        <!-- Now, we need a button in order to submit the typed out question -->
+        <button id="ask-button">Ask the Magic Eight Ball</button>
+    </div>
+    <script src="main.js"></script> <!-- We need to link the javascript so that the function made will link and connect to the divs so that it takes the 
+    question-input text when clicking the ask-button so that it can then randomize and provide an answer and put it where the respons div is -->
+</body>
+</html>
