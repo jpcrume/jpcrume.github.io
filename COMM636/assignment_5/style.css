@@ -110,8 +110,8 @@ p {
 /* Adjust button container for responsiveness */
 .button-container {
     display: flex;
-    justify-content: space-around; /* Ensure even spacing */
-    flex-wrap: wrap; /* Allow buttons to wrap when the screen is small */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
     margin-top: 20px;
 }
 
@@ -232,7 +232,7 @@ p {
 }
 
 /* Fav human page */
-.full-page-image {
+.taylor-page-image {
     background-image: url('media/TS.jpg');
     background-size: contain; 
     background-repeat: no-repeat;
