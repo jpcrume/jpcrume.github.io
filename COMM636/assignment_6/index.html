@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzanne Collins</title>
+    <!-- Link to Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <link rel="icon" href="media/favcon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Author Section -->
+    <header class="author">
+        <nav class="navbar">
+            <!-- Logo as Image -->
+            <img src="media/logo.png" alt="Suzanne Collins' Logo" class="logo">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <!-- Fullscreen Overlay Menu -->
+            <div class="overlay" id="overlayMenu">
+                <!-- Close Button -->
+                <button class="close-btn" onclick="toggleMenu()">×</button>
+                <ul class="overlay-content">
+                    <li><a href="../assignment_6/index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="../assignment_6/pages/books.html" onclick="toggleMenu()">Books</a></li>
+                    <li><a href="#comingsoon" onclick="toggleMenu()">Coming Soon</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="author-content">
+            <h1>Welcome to the World(s) of Suzanne Collins</h1>
+            <a href="books.html" class="cta-button">Explore her Books</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself and your background as an author.</p>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="books-section">
+        <h2>Best known for...</h2>
+        <div class="book-gallery">
+            <div class="book">
+                <img src="media/hungergamesagain.png" alt="The Hunger Games Series">
+                <p>The Hunger Games Series</p>
+            </div>
+            <div class="book">
+                <img src="media/chroniclesagain.png" alt="The Underland Chronicles">
+                <p>The Underland Chronicles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

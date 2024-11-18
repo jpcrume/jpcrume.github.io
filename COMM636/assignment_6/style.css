@@ -1,0 +1,261 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and fonts */
+body {
+    font-family: 'Russo One', sans-serif; /* Hunger Games-inspired font */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar (General) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar .logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Index-Specific Navbar */
+.author .navbar {
+    background-color: transparent; /* No background for the author page */
+}
+
+/* Fullscreen Overlay */
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 20;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.overlay-content li {
+    list-style: none;
+}
+
+.overlay-content li a {
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+    display: block;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Index Page Header */
+.author {
+    background-image: url("media/cornucopia.jpg");
+    background-size: cover;
+    background-position: center;
+    color: goldenrod;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.author-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.cta-button {
+    background-color: #f04e30;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 1em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* About Me and Books Sections (Center Alignment) */
+.about-section,
+.books-section {
+    text-align: center;
+    padding: 2em 5%;
+}
+
+/* Books Page Header */
+.page-header {
+    text-align: center;
+    padding: 5em 1em 2em;
+    background-color: goldenrod;
+    color: #333;
+}
+
+.page-header h1 {
+    font-size: 2.8em;
+    margin: 0;
+}
+
+/* Alternating Row Styles for Books Page */
+.color-block {
+    display: flex;
+    align-items: center;
+    padding: 2em 5%;
+    gap: 2em;
+}
+
+.color-block.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.color-block.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+/* Text Section */
+.color-block .text {
+    flex: 1;
+    text-align: left;
+}
+
+.color-block .text h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.color-block .text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.color-block .text .cta-button {
+    margin-top: 1em;
+    background-color: goldenrod;
+    color: #333;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.color-block .text .cta-button:hover {
+    background-color: #f4f4f4;
+    color: goldenrod;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Section */
+.color-block .image {
+    flex: 1;
+}
+
+.color-block .image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Books Grid for Index Page */
+.book-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.book {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.book p {
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+/* Footer */
+.footer {
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2em;
+    }
+
+    .page-header p {
+        font-size: 1em;
+    }
+
+    .color-block {
+        flex-direction: column;
+    }
+
+    .color-block .text h2 {
+        font-size: 1.5em;
+    }
+
+    .color-block .text p {
+        font-size: 1em;
+    }
+}
