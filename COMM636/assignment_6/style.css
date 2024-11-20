@@ -1,4 +1,4 @@
-/* Reset basic styles */
+/* Overall styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +7,12 @@
 
 /* Body and fonts */
 body {
-    font-family: 'Russo One', sans-serif; /* Hunger Games-inspired font */
+    font-family: 'Russo One', sans-serif; 
     color: #333;
     line-height: 1.6;
 }
 
-/* Navbar (General) */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ body {
     top: 0;
     z-index: 10;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
@@ -33,7 +33,7 @@ body {
 
 /* Index-Specific Navbar */
 .author .navbar {
-    background-color: transparent; /* No background for the author page */
+    background-color: transparent; 
 }
 
 /* Fullscreen Overlay */
@@ -116,7 +116,7 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* About Me and Books Sections (Center Alignment) */
+/* About Me and Books Sections on Index */
 .about-section,
 .books-section {
     text-align: center;
