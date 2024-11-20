@@ -22,8 +22,8 @@ body {
     width: 100%;
     top: 0;
     z-index: 10;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
 }
 
 .navbar .logo {
@@ -108,7 +108,7 @@ body {
     font-size: 1.2em;
     margin-top: 1em;
     border-radius: 5px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
     transition: box-shadow 0.3s ease;
 }
 
@@ -229,6 +229,104 @@ body {
     margin-top: 0.5em;
 }
 
+/* Quiz Section (Updated Layout) */
+.quiz-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background-color: #f4f4f4; /* Optional background */
+    text-align: center;
+}
+
+/* Align quiz-container content */
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style question text */
+#quiz-container h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+/* Style the answers-container grid */
+.answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+/* Quiz answer button styles (retain existing styles) */
+.quiz-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f04e30;
+    color: #fff;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-answer:hover {
+    background-color: #c43c24;
+}
+
+/* Images in quiz answers */
+.quiz-answer img.answer-image {
+    max-width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+/* Start button */
+#start-quiz {
+    margin-top: 1em;
+    background-color: #f04e30;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+#start-quiz:hover {
+    background-color: #c43c24;
+}
+
+/* Restart quiz button */
+#restart-quiz {
+    margin-top: 1em;
+    background-color: #f04e30;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+#restart-quiz:hover {
+    background-color: #c43c24;
+}
+
 /* Footer */
 .footer {
     padding: 1em;
@@ -257,5 +355,9 @@ body {
 
     .color-block .text p {
         font-size: 1em;
+    }
+
+    #quiz-container h3 {
+        font-size: 1.5em;
     }
 }

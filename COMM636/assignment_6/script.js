@@ -1,46 +1,79 @@
 /* For hamburger navigation bar */
-/* Finds the menu element by ID of overlayMenu */
-/* Then adds or removes the show class from the element (making it visible by click rather than just constant on screen) */
 function toggleMenu() {
     const overlayMenu = document.getElementById("overlayMenu");
     overlayMenu.classList.toggle("show");
 }
 
-/* This makes it so the script only runs after content is loaded */
 document.addEventListener("DOMContentLoaded", () => {
     const quizContainer = document.getElementById("quiz-container");
     const startButton = document.getElementById("start-quiz");
 
-    /* An array of questions for the quiz */
-    /* The results map values which contribute to the resulting book suggestion */
     const quizQuestions = [
         {
-            question: "What's your ideal setting for a story?",
+            question: "Pick a food!",
             answers: [
-                { text: "A dystopian future", value: "hunger_games" },
-                { text: "An underground fantasy world", value: "underland_chronicles" },
-                { text: "Standalone tales with unique themes", value: "standalone_books" }
+                { text: "Blueberries", value: "hunger_games", image: "../media/Quiz Images/blueberry.png" },
+                { text: "Roasted Squirrel", value: "hunger_games", image: "../media/Quiz Images/squirrel.jpg" },
+                { text: "Squid Ink Soup", value: "underland_chronicles", image: "../media/Quiz Images/squidink.jpg" },
+                { text: "Bread", value: "standalone_books", image: "../media/Quiz Images/bread.jpg" }
             ]
         },
         {
-            question: "Which quality best describes the main character you want to follow?",
+            question: "Choose your house",
             answers: [
-                { text: "Courageous and resourceful", value: "hunger_games" },
-                { text: "Adventurous and curious", value: "underland_chronicles" },
-                { text: "Thoughtful and introspective", value: "standalone_books" }
+                { text: "Cottage", value: "standalone_books", image: "../media/Quiz Images/cottage.jpg" },
+                { text: "Rustic House", value: "hunger_games", image: "../media/Quiz Images/village.jpg" },
+                { text: "Modern Home", value: "standalone_books", image: "../media/Quiz Images/house.jpg" },
+                { text: "Apartments", value: "underland_chronicles", image: "../media/Quiz Images/apartment.png" }
             ]
         },
         {
-            question: "Pick your favorite genre:",
+            question: "Everyone needs a pet, choose which to adopt!",
             answers: [
-                { text: "Action and survival", value: "hunger_games" },
-                { text: "Fantasy and adventure", value: "underland_chronicles" },
-                { text: "Drama and life stories", value: "standalone_books" }
+                { text: "Bird", value: "hunger_games", image: "../media/Quiz Images/mockingbird.jpg" },
+                { text: "Bat", value: "underland_chronicles", image: "../media/Quiz Images/bat.png" },
+                { text: "Rat", value: "underland_chronicles", image: "../media/Quiz Images/rat.png" },
+                { text: "Puppy", value: "standalone_books", image: "../media/Quiz Images/puppy.png" }
+            ]
+        }, 
+        {
+            question: "You'll need to be able to protect and defend yourself, choose wisely.",
+            answers: [
+                { text: "Bow and Arrow", value: "hunger_games", image: "../media/Quiz Images/bowandarrow.png" },
+                { text: "Armor", value: "underland_chronicles", image: "../media/Quiz Images/armor.jpg" },
+                { text: "Sword", value: "standalone_books", image: "../media/Quiz Images/sword.jpg" },
+                { text: "Slingshot", value: "standalone_books", image: "../media/Quiz Images/slingshot.jpg" }
+            ]
+        }, 
+        {
+            question: "You've been hurt, what is your ideal way to heal?",
+            answers: [
+                { text: "Potion", value: "hunger_games", image: "../media/Quiz Images/potion.png" },
+                { text: "Ointment", value: "hunger_games", image: "../media/Quiz Images/cream.jpg" },
+                { text: "Magic Mushrooms", value: "underland_chronicles", image: "../media/Quiz Images/mushroom.jpg" },
+                { text: "Cookie", value: "standalone_books", image: "../media/Quiz Images/cookie.png" }
+            ]
+        }, 
+        {
+            question: "What is your favorite genre?",
+            answers: [
+                { text: "Enemies to Lovers", value: "hunger_games", image: "../media/Quiz Images/entolo.png" },
+                { text: "Adventure Quest", value: "underland_chronicles", image: "../media/Quiz Images/adventurquest.png" },
+                { text: "Fantasy", value: "underland_chronicles", image: "../media/Quiz Images/fantast.png" },
+                { text: "Dystopian", value: "hunger_games", image: "../media/Quiz Images/dystopian.jpg" }
+            ]
+        }, 
+        {
+            question: "Finally, what is the trait you desire most for a main character to have?",
+            answers: [
+                { text: "Courage", value: "hunger_games", image: "../media/Quiz Images/courage.jpg" },
+                { text: "Curiousity", value: "underland_chronicles", image: "../media/Quiz Images/curious.png" },
+                { text: "I just like standalone stories", value: "standalone_books", image: "../media/Quiz Images/standalones.jpg" },
+                { text: "Autobiographical", value: "standalone_books", image: "../media/Quiz Images/autobio.png" }
             ]
         }
     ];
 
-    /* For defining the book results that are displayed */
     const bookResults = {
         hunger_games: {
             title: "The Hunger Games Series",
@@ -59,42 +92,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    /* For starting the quiz with the use of a button */
     startButton.addEventListener("click", () => startQuiz());
 
-    /* Initializing currentQuestion to track user's progress of the quiz */
-    /* Initializing answers to record how many times each book series values is selected */
     function startQuiz() {
         let currentQuestion = 0;
         const answers = {};
 
-        /* Checking to ensure all questions are answered and showing the result */
         function showQuestion() {
             if (currentQuestion >= quizQuestions.length) {
                 showResult();
                 return;
             }
 
-            /* Takes from quiz questions and generates buttons for the answer options using map() */
             const question = quizQuestions[currentQuestion];
             quizContainer.innerHTML = `
                 <h3>${question.question}</h3>
-                <div>
+                <div class="answers-container">
                     ${question.answers
                         .map(
-                            (answer, index) =>
-                                `<button class="quiz-answer" data-value="${answer.value}">${index + 1}. ${answer.text}</button>`
+                            (answer, index) => `
+                                <button class="quiz-answer" data-value="${answer.value}">
+                                    ${
+                                        answer.image
+                                            ? `<img class="answer-image" src="${answer.image}" alt="${answer.text}">`
+                                            : ""
+                                    }
+                                    <span>${answer.text}</span>
+                                </button>`
                         )
                         .join("")}
                 </div>
             `;
 
-            /* Adds click event listeners to all answer / button options */
-            /* Records the choices using data-values  */
-            /* Then proceeds to next question by incrementing current question and calls show question to display the next question */
             document.querySelectorAll(".quiz-answer").forEach((button) => {
                 button.addEventListener("click", (event) => {
-                    const value = event.target.getAttribute("data-value");
+                    const value = event.target.closest("button").getAttribute("data-value");
                     answers[value] = (answers[value] || 0) + 1;
                     currentQuestion++;
                     showQuestion();
@@ -102,10 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        /* Uses reduce() to determine the most selected answer to find the key with the highest count in answers */
-        /* Displaying the result for corresponding book rec in book results */
-        /* updates quiz container to show result of book title, description, and image */
-        /* Allow retaking the quiz with the restart quiz */
         function showResult() {
             const resultKey = Object.keys(answers).reduce((a, b) =>
                 answers[a] > answers[b] ? a : b
