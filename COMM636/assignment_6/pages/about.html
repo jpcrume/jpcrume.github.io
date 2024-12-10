@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website Demonstrations">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Julia Crume">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzanne Collins | About Suzanne</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <link rel="icon" href="../media/favcon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="../media/logo.png" alt="Suzanne Collins' Logo" class="logo">
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <div class="overlay" id="overlayMenu">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <ul class="overlay-content">
+                <li><a href="../assignment_6/index.html">Home</a></li>
+                <li><a href="../assignment_6/pages/books.html">Books</a></li>
+                <li><a href="../assignment_6/pages/about.html">About Suzanne</a></li>
+                <li><a href="../assignment_6/pages/film_adapt.html">Film Adaptations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1><marquee>About Suzanne Collins</marquee></h1>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-author-section">
+        <img src="../media/author.png" alt="Suzanne Collins" class="about-author-photo">
+        <div class="about-author-text">
+            <p>Suzanne Collins is a celebrated author known for her defining works that captivate readers of all ages. 
+                Best known for The Hunger Games series, she has left an undeniable mark on modern literature, combining gripping storytelling with profound social commentary.</p>
+                <br>
+            <p>Her earlier works include The Underland Chronicles, a fantastical adventure series exploring destiny and bravery, and several standalone titles that demonstrate her versatility, 
+                including the autobiographical Year of the Jungle and the playful When Charlie McButton Lost Power.</p>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts-section">
+        <h2>Fun Facts About Suzanne</h2>
+        <ul class="fun-facts-list">
+            <li>She began her career writing for children's television, working on shows like Clarissa Explains It All and Little Bear.</li>
+            <li>The idea for The Hunger Games came to her while channel surfing between reality TV and war coverage.</li>
+            <li>Her works have been translated into over 50 languages and sold millions of copies worldwide.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Suzanne Collins. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

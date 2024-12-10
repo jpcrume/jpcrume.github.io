@@ -1,56 +1,113 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Website Demonstrations">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Julia Crume">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suzanne Collins</title>
-    <!-- Link to Google Font -->
+    <title>Suzanne Collins | Home</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
     <link rel="icon" href="media/favcon1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header with Author Section -->
+    <!-- Disclaimer pop up on page to let audience know this is her only site or social media
+     formerly in her header on her old site -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="popup-close">&times;</span>
+            <h2>Disclaimer: </h2>
+            <p>This is the ONLY official website for author Suzanne Collins. 
+                Collins is not on any social media platforms. Any accounts that 
+                you may find in her name are not authorized by her.
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation to go to other pages duplicate for every html-->
     <header class="author">
         <nav class="navbar">
-            <!-- Logo as Image -->
             <img src="media/logo.png" alt="Suzanne Collins' Logo" class="logo">
-            <!-- Hamburger Menu Button -->
             <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-            <!-- Fullscreen Overlay Menu -->
             <div class="overlay" id="overlayMenu">
-                <!-- Close Button -->
                 <button class="close-btn" onclick="toggleMenu()">×</button>
                 <ul class="overlay-content">
                     <li><a href="../assignment_6/index.html" onclick="toggleMenu()">Home</a></li>
                     <li><a href="../assignment_6/pages/books.html" onclick="toggleMenu()">Books</a></li>
-                    <li><a href="#comingsoon" onclick="toggleMenu()">Coming Soon</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                    <li><a href="../assignment_6/pages/about.html" onclick="toggleMenu()">About Suzanne</a></li>
+                    <li><a href="../assignment_6/pages/film_adapt.html" onclick="toggleMenu()">Film Adaptations</a></li>
                 </ul>
             </div>
         </nav>
         <div class="author-content">
             <h1>Welcome to the World(s) of Suzanne Collins</h1>
-            <a href="books.html" class="cta-button">Explore her Books</a>
+            <a href="pages/books.html" class="index-button">Explore Her Books</a>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself and your background as an author.</p>
+    <!-- Marquee of book covers that you can click on to inspect more, and purchase options repeated links twice because it wasnt repeating smoothly the first time-->
+    <section id="marquee" class="marquee-section">
+        <div class="marquee-container">
+            <a href="https://www.barnesandnoble.com/w/the-hunger-games-suzanne-collins/1100171585?ean=9780439023528" target="_blank"><img src="media/HG Covers/1.jpg" alt="Hunger Games"></a>
+            <a href="https://www.barnesandnoble.com/w/catching-fire-suzanne-collins/1100296850?ean=9780545586177" target="_blank"><img src="media/HG Covers/2.jpg" alt="Catching Fire"></a>
+            <a href="https://www.barnesandnoble.com/w/mockingjay-suzanne-collins/1100171586?ean=9780545663267" target="_blank"><img src="media/HG Covers/3.jpg" alt="Mockingjay"></a>
+            <a href="https://www.barnesandnoble.com/w/the-ballad-of-songbirds-and-snakes-suzanne-collins/1133952083?ean=9781339016573" target="_blank"><img src="media/HG Covers/pre.jpg" alt="The Ballad of Songbirds and Snakes"></a>
+            <a href="https://www.barnesandnoble.com/w/sunrise-on-the-reaping-suzanne-collins/1145703863?ean=9781546175759" target="_blank"><img src="media/HG Covers/preaf.jpg" alt="Sunrise on the Reaping"></a>
+            <a href="https://www.barnesandnoble.com/w/the-hunger-games-suzanne-collins/1144659494?ean=9781339030609" target="_blank"><img src="media/HG Covers/newest.jpg" alt="Hunger Games (Illustrated)"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-the-overlander-suzanne-collins/1100295324?ean=9780439678131" target="_blank"><img src="media/UC Covers/1.jpg" alt="Gregor the Overlander"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-prophecy-of-bane-suzanne-collins/1100295326?ean=9780439650762" target="_blank"><img src="media/UC Covers/2.jpg" alt="Gregor and the Prophecy of Bane"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-curse-of-the-warmbloods-suzanne-collins/1100295328?ean=9780439656245" target="_blank"><img src="media/UC Covers/3.jpg" alt="Gregor and the Curse of the Warmbloods"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-marks-of-secret-suzanne-collins/1100295331?ean=9780439791465" target="_blank"><img src="media/UC Covers/4.jpg" alt="Gregor and the Marks of Secret"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-code-of-claw-suzanne-collins/1100295330?ean=9780439791441" target="_blank"><img src="media/UC Covers/5.jpg" alt="Gregor and the Code of Claw"></a>
+            <a href="https://www.waterstones.com/book/at-home-in-the-community/suzanne-collins/roy-mcconkey/9781859232200" target="_blank"><img src="media/Independent Covers/AHITC.png" alt="At Home in the Community?"></a>
+            <a href="https://www.barnesandnoble.com/w/when-charlie-mcbutton-lost-power-suzanne-collins/1103427804?ean=9780142408575&gQT=2" target="_blank"><img src="media/Independent Covers/CMBLP.jpg" alt="When Charlie McButton Lost Power"></a>
+            <a href="https://www.amazon.com/Proof-Mystery-Files-Shelby-No-11/dp/067102695X" target="_blank"><img src="media/Independent Covers/FP.jpg" alt="The Mystery Files of Shelby Woo (Fire Proof)"></a>
+            <a href="https://archive.org/details/skinnydipping0000coll" target="_blank"><img src="media/Independent Covers/SD.jpg" alt="Skinny Dipping"></a>
+            <a href="https://www.amazon.com/Year-Jungle-Suzanne-Collins/dp/0545425166?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A5QM7KD57PIMQ&gQT=2" target="_blank"><img src="media/Independent Covers/YOTJ.jpg" alt="Year of the Jungle"></a>
+            <a href="https://www.barnesandnoble.com/w/the-hunger-games-suzanne-collins/1100171585?ean=9780439023528" target="_blank"><img src="media/HG Covers/1.jpg" alt="Hunger Games"></a>
+            <a href="https://www.barnesandnoble.com/w/catching-fire-suzanne-collins/1100296850?ean=9780545586177" target="_blank"><img src="media/HG Covers/2.jpg" alt="Catching Fire"></a>
+            <a href="https://www.barnesandnoble.com/w/mockingjay-suzanne-collins/1100171586?ean=9780545663267" target="_blank"><img src="media/HG Covers/3.jpg" alt="Mockingjay"></a>
+            <a href="https://www.barnesandnoble.com/w/the-ballad-of-songbirds-and-snakes-suzanne-collins/1133952083?ean=9781339016573" target="_blank"><img src="media/HG Covers/pre.jpg" alt="The Ballad of Songbirds and Snakes"></a>
+            <a href="https://www.barnesandnoble.com/w/sunrise-on-the-reaping-suzanne-collins/1145703863?ean=9781546175759" target="_blank"><img src="media/HG Covers/preaf.jpg" alt="Sunrise on the Reaping"></a>
+            <a href="https://www.barnesandnoble.com/w/the-hunger-games-suzanne-collins/1144659494?ean=9781339030609" target="_blank"><img src="media/HG Covers/newest.jpg" alt="Hunger Games (Illustrated)"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-the-overlander-suzanne-collins/1100295324?ean=9780439678131" target="_blank"><img src="media/UC Covers/1.jpg" alt="Gregor the Overlander"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-prophecy-of-bane-suzanne-collins/1100295326?ean=9780439650762" target="_blank"><img src="media/UC Covers/2.jpg" alt="Gregor and the Prophecy of Bane"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-curse-of-the-warmbloods-suzanne-collins/1100295328?ean=9780439656245" target="_blank"><img src="media/UC Covers/3.jpg" alt="Gregor and the Curse of the Warmbloods"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-marks-of-secret-suzanne-collins/1100295331?ean=9780439791465" target="_blank"><img src="media/UC Covers/4.jpg" alt="Gregor and the Marks of Secret"></a>
+            <a href="https://www.barnesandnoble.com/w/gregor-and-the-code-of-claw-suzanne-collins/1100295330?ean=9780439791441" target="_blank"><img src="media/UC Covers/5.jpg" alt="Gregor and the Code of Claw"></a>
+            <a href="https://www.waterstones.com/book/at-home-in-the-community/suzanne-collins/roy-mcconkey/9781859232200" target="_blank"><img src="media/Independent Covers/AHITC.png" alt="At Home in the Community?"></a>
+            <a href="https://www.barnesandnoble.com/w/when-charlie-mcbutton-lost-power-suzanne-collins/1103427804?ean=9780142408575&gQT=2" target="_blank"><img src="media/Independent Covers/CMBLP.jpg" alt="When Charlie McButton Lost Power"></a>
+            <a href="https://www.amazon.com/Proof-Mystery-Files-Shelby-No-11/dp/067102695X" target="_blank"><img src="media/Independent Covers/FP.jpg" alt="The Mystery Files of Shelby Woo (Fire Proof)"></a>
+            <a href="https://archive.org/details/skinnydipping0000coll" target="_blank"><img src="media/Independent Covers/SD.jpg" alt="Skinny Dipping"></a>
+            <a href="https://www.amazon.com/Year-Jungle-Suzanne-Collins/dp/0545425166?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A5QM7KD57PIMQ&gQT=2" target="_blank"><img src="media/Independent Covers/YOTJ.jpg" alt="Year of the Jungle"></a>
+        </div>
     </section>
 
-    <!-- Books Section -->
+    <!-- A glimpse into the author herself, reference to read more about her on her own page of the site -->
+    <section id="about" class="about-section">
+        <h2>About Suzanne Collins</h2>
+        <div class="about-content">
+            <p>Suzanne Collins is a renowned American author, best known for The Hunger Games series, 
+                a global phenomenon exploring themes of survival, rebellion, and justice. 
+                She also authored The Underland Chronicles, a fantasy-adventure series set in a hidden world beneath New York City. 
+                Before becoming a bestselling novelist, Collins wrote for children's television, which shaped her talent for crafting compelling, 
+                emotionally rich stories.</p>
+            <img src="media/suzannecollins-2020-photocredittoddplitt.jpg" alt="Suzanne Collins" class="about-photo">
+        </div>
+        <a href="pages/about.html" class="index-button">Learn More</a>
+    </section>
+
+    <!-- A quick reference to her two biggest series' should it link to their sites or to the books page... -->
     <section id="books" class="books-section">
         <h2>Best known for...</h2>
         <div class="book-gallery">
             <div class="book">
-                <img src="media/hungergamesagain.png" alt="The Hunger Games Series">
+                <a href="../assignment_6/pages/books.html#hunger-games" target="_blank"><img src="media/hungergamesagain.png" alt="The Hunger Games Series"></a>
                 <p>The Hunger Games Series</p>
             </div>
             <div class="book">
-                <img src="media/chroniclesagain.png" alt="The Underland Chronicles">
+                <a href="../assignment_6/pages/books.html#underland" target="_blank"><img src="media/chroniclesagain.png" alt="The Underland Chronicles"></a>
                 <p>The Underland Chronicles</p>
             </div>
         </div>
@@ -58,7 +115,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Suzanne Collins.</p>
     </footer>
 
     <script src="script.js"></script>

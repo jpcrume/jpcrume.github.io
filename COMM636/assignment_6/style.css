@@ -1,18 +1,18 @@
-/* Overall styles */
+
+/* Default styling for entire website */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and fonts */
 body {
     font-family: 'Russo One', sans-serif; 
     color: #333;
     line-height: 1.6;
 }
 
-/* Navbar */
+/* Navigation bar that will be utilized on every page */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -31,12 +31,11 @@ body {
     width: auto;
 }
 
-/* Index-Specific Navbar */
 .author .navbar {
     background-color: transparent; 
 }
 
-/* Fullscreen Overlay */
+/* Navigation bar will take up the entire screen */
 .overlay {
     height: 100%;
     width: 100%;
@@ -68,7 +67,7 @@ body {
     display: block;
 }
 
-/* Close Button */
+/* The closing of the navigation bar so it is user intuitive */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -80,7 +79,7 @@ body {
     cursor: pointer;
 }
 
-/* Index Page Header */
+/* Index Page */
 .author {
     background-image: url("media/cornucopia.jpg");
     background-size: cover;
@@ -100,7 +99,7 @@ body {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-.cta-button {
+.index-button {
     background-color: #f04e30;
     color: #fff;
     padding: 0.8em 1.5em;
@@ -112,18 +111,106 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.cta-button:hover {
+.index-button:hover {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* About Me and Books Sections on Index */
-.about-section,
-.books-section {
+.cta-button {
+    background-color: #f04e30;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 1em;
+    border-radius: 5px;
+    display: inline-block;
     text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c43c24;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+button, .cta-button, .quiz-answer {
+    font-family: 'Russo One', sans-serif; 
+    font-size: 1em; 
+    color: inherit;
+    text-transform: none; 
+    background: none; 
+    border: none; 
+    cursor: pointer;
+}
+
+/* About Me Section on Index.html */
+.about-section {
+    text-align: center; 
     padding: 2em 5%;
 }
 
-/* Books Page Header */
+.about-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: .00001em; 
+    text-align: left; 
+    margin-left: 100px;
+}
+
+.about-text {
+    flex: 1; 
+    margin: 0; 
+}
+
+.about-photo {
+    width: 200px; 
+    height: auto; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    flex-shrink: 0; 
+    margin-right: 100px;
+}
+
+
+/*  Best Known For... section */
+.books-section {
+    text-align: center;
+    margin-top: 2em; 
+    padding: 1em 5%;
+    clear: both; /* Prevents flexbox from affecting this section */
+}
+
+.book-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.book {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.book p {
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+/* Books.html */
 .page-header {
     text-align: center;
     padding: 5em 1em 2em;
@@ -136,7 +223,6 @@ body {
     margin: 0;
 }
 
-/* Alternating Row Styles for Books Page */
 .color-block {
     display: flex;
     align-items: center;
@@ -154,7 +240,6 @@ body {
     color: #f4f4f4;
 }
 
-/* Text Section */
 .color-block .text {
     flex: 1;
     text-align: left;
@@ -187,101 +272,86 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Image Section */
 .color-block .image {
     flex: 1;
 }
 
 .color-block .image img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Match the marquee image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill neatly without distortion */
+    border-radius: 5px; /* Rounded edges for consistency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional styling */
+    margin: 0 auto; /* Center the images within their container */
+    margin-left: 200px;
 }
 
-/* Books Grid for Index Page */
-.book-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-}
-
-.book {
-    width: 150px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.book img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 0.5em;
-}
-
-.book p {
-    font-size: 1em;
-    margin-top: 0.5em;
-}
-
-/* Quiz Section (Updated Layout) */
+/* Quiz Section formatting */
 .quiz-section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 60vh;
-    background-color: #f4f4f4; /* Optional background */
+    background-color: #f4f4f4; 
     text-align: center;
 }
 
-/* Align quiz-container content */
 #quiz-container {
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Style question text */
 #quiz-container h3 {
     font-size: 2em;
     margin-bottom: 1em;
 }
 
-/* Style the answers-container grid */
-.answers-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;
+#quiz-container a {
+    color: blue;
+    text-decoration: underline;
+    font-size: 1em;
 }
 
-/* Quiz answer button styles (retain existing styles) */
+#quiz-container a:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+
+.answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* makes answer choices in a prettier format */
+    gap: 1em; 
+    justify-content: center; 
+    padding: 1em; 
+}
+
+@media (min-width: 600px) {
+    .answers-container {
+        grid-template-columns: repeat(4, 1fr); /* Switch to 4 equal-width columns for wider screens shoutout ChatGPT for this <3 */
+    }
+}
+
+/* Quiz answer buttons kept getting messed up so idk what still needs to be here or not but I refuse to delete and have things break :P */
 .quiz-answer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f04e30;
-    color: #fff;
-    padding: 1em;
-    border: none;
-    border-radius: 5px;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f04e30; 
+    color: #fff; 
+    padding: 1em; 
+    border-radius: 5px; 
+    border: none; 
     cursor: pointer;
-    font-size: 1.2em;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    transition: background-color 0.3s ease;
+    width: 150px; 
+    height: 150px; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .quiz-answer:hover {
-    background-color: #c43c24;
+    background-color: #c43c24; 
+    transform: scale(1.05); 
 }
 
 /* Images in quiz answers */
@@ -293,7 +363,6 @@ body {
     margin-bottom: 0.5em;
 }
 
-/* Start button */
 #start-quiz {
     margin-top: 1em;
     background-color: #f04e30;
@@ -310,7 +379,6 @@ body {
     background-color: #c43c24;
 }
 
-/* Restart quiz button */
 #restart-quiz {
     margin-top: 1em;
     background-color: #f04e30;
@@ -327,15 +395,7 @@ body {
     background-color: #c43c24;
 }
 
-/* Footer */
-.footer {
-    padding: 1em;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-/* Responsive Design */
+/* Ensuring everything is responsive */
 @media (max-width: 768px) {
     .page-header h1 {
         font-size: 2em;
@@ -360,4 +420,287 @@ body {
     #quiz-container h3 {
         font-size: 1.5em;
     }
+}
+
+
+/* Navigation bar has hamburger icon yummy */
+.hamburger {
+    font-size: 2.5em; 
+    padding: 0.5em 0.8em;
+    background: none; 
+    border: none; 
+    color: #f04e30; 
+    cursor: pointer; 
+    z-index: 15; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+}
+
+.hamburger:hover {
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.9); 
+    transition: text-shadow 0.3s ease; 
+}
+
+/* Popup for disclaimer */
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100; 
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease forwards; 
+}
+
+.popup.show {
+    display: flex; 
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #333;
+    position: relative; 
+}
+
+.popup-content h2 {
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    color: goldenrod;
+}
+
+.popup-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Marquee for book images on index.html */
+.marquee-section {
+    background-color: #f4f4f4;
+    padding: 1em 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-container {
+    display: flex;
+    gap: 1em;
+    animation: marquee 20s linear infinite; 
+}
+
+.marquee-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.marquee-container img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.marquee-section {
+    background-color: #ffffff; 
+    padding: 2em 5%;
+    text-align: center;
+    color: #333;
+}
+
+.about-section {
+    background-color: #333; 
+    color: #ffffff; 
+    text-align: center;
+}
+
+.books-section {
+    background-color: #ffffff; 
+    color: #333; 
+    text-align: center;
+}
+
+.about-section h2,
+.books-section h2 {
+    font-size: 2.5em;
+}
+
+.about-section p,
+.books-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-author-section {
+    padding: 3em 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background-color: #f4f4f4;
+}
+
+.about-author-photo {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.about-author-text {
+    max-width: 600px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+}
+
+.fun-facts-section {
+    padding: 3em 5%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.fun-facts-section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.fun-facts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fun-facts-list li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.fun-facts-list li::before {
+    content: "• ";
+    color: goldenrod;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+
+.films-overview {
+    padding: 2em 5%;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.film-section {
+    padding: 2em 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.film {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em;
+}
+
+.film img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.film-text {
+    flex: 1;
+}
+
+.film-text h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.film-text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.films-facts {
+    padding: 2em 5%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.films-facts h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.films-facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.films-facts li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.films-facts li::before {
+    content: "• ";
+    color: goldenrod;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.footer {
+    padding: 1em;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
 }

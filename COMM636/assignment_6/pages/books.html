@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Website Demonstrations">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Julia Crume">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suzanne Collins | Book Collection</title>
-    <!-- Link to Google Font -->
+    <title>Suzanne Collins | Books</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
     <link rel="icon" href="../media/favcon1.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- Navbar -->
+     <!-- Navigation to go to other pages duplicate for every html-->
     <nav class="navbar">
         <img src="../media/logo.png" alt="Suzanne Collins' Logo" class="logo">
         <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
@@ -19,13 +21,12 @@
             <ul class="overlay-content">
                 <li><a href="../assignment_6/index.html" onclick="toggleMenu()">Home</a></li>
                 <li><a href="../assignment_6/pages/books.html" onclick="toggleMenu()">Books</a></li>
-                <li><a href="#comingsoon" onclick="toggleMenu()">Coming Soon</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="../assignment_6/pages/about.html" onclick="toggleMenu()">About Suzanne</a></li>
+                <li><a href="../assignment_6/pages/film_adapt.html" onclick="toggleMenu()">Film Adaptations</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <header class="page-header">
         <h1><marquee>Book Collection</marquee></h1>
     </header>
@@ -41,44 +42,99 @@
     <!-- Row 2: Coming Soon -->
     <section class="row color-block dark">
         <div class="image">
-            <img src="../media/comingsoon.jpg" alt="Coming Soon">
+            <img src="../media/HG Covers/preaf.jpg" alt="Coming Soon">
         </div>
         <div class="text">
-            <h2>Coming Soon</h2>
-            <p>Stay tuned for Suzanne Collins' next masterpiece, full of adventure and unforgettable characters!</p>
+            <h2><a href="https://www.barnesandnoble.com/w/sunrise-on-the-reaping-suzanne-collins/1145703863" target="_blank" style="text-decoration: underline; color: inherit;">Coming Soon: Sunrise on the Reaping</a></h2>
+            <p>Coming March 18, 2025
+                <br>
+                <br>
+                Step back into the world of Panem, twenty-four years before the events of The Hunger Games. 
+                Sunrise on the Reaping explores the morning of the reaping for the Fiftieth Hunger Games, 
+                also known as the Second Quarter Quell. This new chapter delves into themes of propaganda, 
+                power, and the ease with which the many are governed by the few. Inspired by David Hume's 
+                reflections on submission and control, Suzanne Collins crafts a thought-provoking narrative 
+                that challenges readers to confront the question: Real or not real?
+            </p>
         </div>
     </section>
 
-    <!-- Row 3: Hunger Games -->
     <section class="row color-block light">
         <div class="text">
-            <h2>The Hunger Games Series</h2>
-            <p>An epic tale of survival, rebellion, and the strength of the human spirit. Follow Katniss Everdeen's journey through the Capitol’s treacherous games.</p>
+            <h2><a href="https://www.barnesandnoble.com/w/the-hunger-games-suzanne-collins/1144659494" target="_blank" style="text-decoration: underline; color: inherit;">Now Available - The Hunger Games: Illustrated Edition</a></h2>
+            <p>
+                For the first time ever, The Hunger Games is presented in a stunning deluxe illustrated edition, 
+                featuring spellbinding artwork by internationally acclaimed artist Nico Delort. Delort’s striking 
+                scratchboard illustrations bring the story to life, capturing the gritty despair of District 12, 
+                the extravagance of the Capitol, and iconic moments like Katniss in her fire-tinged dress. 
+                This large-format edition showcases Delort’s masterful use of positive and negative space, creating an 
+                experience that is both vivid and unforgettable. Praised by Kirkus Reviews with a starred review, 
+                The Hunger Games: Illustrated Edition is a must-have for new and returning fans alike.</p>
         </div>
         <div class="image">
-            <img src="../media/hungergames.jpg" alt="The Hunger Games">
+            <img src="../media/HG Covers/newest.jpg" alt="Recently Released">
         </div>
     </section>
 
-    <!-- Row 4: The Underland Chronicles -->
-    <section class="row color-block dark">
+
+    <section id="hunger-games" class="row color-block dark">
         <div class="image">
-            <img src="../media/underland.jpg" alt="The Underland Chronicles">
+            <img src="../media/Hungergames.png" alt="Hunger Games Series">
         </div>
         <div class="text">
-            <h2>The Underland Chronicles</h2>
-            <p>Descend into the mysterious Underland with Gregor as he uncovers secrets, forms unlikely alliances, and fights for peace.</p>
+            <h2><a href="" target="_blank" style="text-decoration: underline; color: inherit;">The Hunger Games Series</a></h2>
+            <p>Enter the dystopian world of Panem, where Katniss Everdeen’s act of bravery sparks a rebellion against 
+                the Capitol’s cruel Hunger Games. As she battles for survival and freedom, Katniss becomes the 
+                face of a revolution that challenges the oppressive rule of President Snow. From the deadly 
+                arenas to the origins of the Games, this series explores courage, sacrifice, and the fight for a 
+                better future. <br>
+                <br>
+                Discover the stories that have captivated readers worldwide, from Katniss's journey in 
+                The Hunger Games, Catching Fire, and Mockingjay, to the chilling origins of the Games in 
+                The Ballad of Songbirds and Snakes. Experience the newly released The Hunger Games: 
+                Illustrated Edition and look forward to the upcoming Sunrise on the Reaping, set during the 
+                50th Hunger Games.
+            </p>
         </div>
     </section>
 
-    <!-- Row 5: Standalone Books -->
-    <section class="row color-block light">
+
+    <section id="underland" class="row color-block light">
+        <div class="text">
+            <h2><a href="" target="_blank" style="text-decoration: underline; color: inherit;">The Underland Chronicles</a></h2>
+            <p>Follow Gregor and his sister, Boots, as they tumble into the Underland, 
+                a hidden world beneath New York City teeming with giant creatures and dangerous prophecies. 
+                Tasked with fulfilling destinies he never asked for, Gregor must battle monstrous rats, cure deadly plagues,
+                 and uncover dark secrets threatening the fragile peace.
+                 <br>
+                 <br>
+                With courage and sacrifice at its heart, this epic series builds to a thrilling finale where the fate of the 
+                Underland—and Gregor’s 
+                own family—hangs in the balance.</p>
+        </div>
+        <div class="image">
+            <img src="../media/UnderloadChronciles.png" alt="The Underland Chronicles">
+        </div>
+    </section>
+
+
+
+    <section id="standalone" class="row color-block dark">
+        <div class="image">
+            <img src="../media/IPCOV.png" alt="Standalone Books">
+        </div>
         <div class="text">
             <h2>Standalone Books</h2>
-            <p>Explore standalone works by Suzanne Collins that showcase her versatility and brilliance as a storyteller.</p>
-        </div>
-        <div class="image">
-            <img src="../media/standalone.jpg" alt="Standalone Books">
+            <p>From heartfelt stories to thrilling mysteries, Suzanne Collins’ standalone books showcase her 
+                remarkable range as a storyteller. Explore the playful charm of When Charlie McButton Lost Power,
+                 a delightful children’s tale about imagination and connection, or delve into the poignant and 
+                 personal reflections of Year of the Jungle, inspired by her own childhood.
+                <br>
+                <br>
+                Collins also brings her creative genius to unique projects like Fire Proof in The Mystery Files 
+                of Shelby Woo, combining intrigue and adventure, and Skinny Dipping, a sharp, satirical novel. 
+                Each standalone work offers a fresh perspective, demonstrating her versatility and depth across 
+                genres and audiences.</p>
         </div>
     </section>
 
